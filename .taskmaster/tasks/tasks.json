@@ -1,0 +1,1449 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": "1",
+        "title": "Налаштувати Polylang для мультимовності (UK/EN)",
+        "description": "Встановити та налаштувати Polylang plugin для підтримки української та англійської мов. Налаштувати URL структуру /uk/ та /en/, створити language switcher",
+        "status": "done",
+        "priority": "critical",
+        "dependencies": [],
+        "tags": [
+          "backend",
+          "i18n",
+          "polylang"
+        ],
+        "complexity": 7,
+        "estimatedHours": 5,
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Встановити Polylang Free plugin в WordPress",
+            "status": "done",
+            "parentId": "1"
+          },
+          {
+            "id": 1,
+            "title": "Налаштувати українську (default) та англійську мови",
+            "status": "done",
+            "parentId": "1"
+          },
+          {
+            "id": 1,
+            "title": "Налаштувати URL structure: /uk/ та /en/",
+            "status": "done",
+            "parentId": "1"
+          },
+          {
+            "id": 1,
+            "title": "Додати Polylang до WPGraphQL schema",
+            "status": "done",
+            "parentId": "1"
+          },
+          {
+            "id": 1,
+            "title": "Створити GraphQL query для отримання мов та перекладів",
+            "status": "done",
+            "parentId": "1"
+          }
+        ],
+        "updatedAt": "2025-11-25T15:04:50.311Z"
+      },
+      {
+        "id": "2",
+        "title": "Імплементувати Next.js i18n роутинг",
+        "description": "Налаштувати Next.js App Router для динамічних [lang] сегментів, створити middleware для language detection, імплементувати language switcher компонент",
+        "status": "done",
+        "priority": "critical",
+        "dependencies": [
+          "1"
+        ],
+        "tags": [
+          "frontend",
+          "nextjs",
+          "i18n"
+        ],
+        "complexity": 8,
+        "estimatedHours": 6,
+        "subtasks": [
+          {
+            "id": 2,
+            "title": "Створити app/[lang] directory структуру",
+            "status": "done",
+            "parentId": "2"
+          },
+          {
+            "id": 2,
+            "title": "Налаштувати middleware для language detection",
+            "status": "done",
+            "parentId": "2"
+          },
+          {
+            "id": 2,
+            "title": "Створити LanguageSwitcher компонент в header",
+            "status": "done",
+            "parentId": "2"
+          },
+          {
+            "id": 2,
+            "title": "Імплементувати generateStaticParams для [lang] routes",
+            "status": "done",
+            "parentId": "2"
+          },
+          {
+            "id": 2,
+            "title": "Додати hreflang meta tags для SEO",
+            "status": "done",
+            "parentId": "2"
+          }
+        ],
+        "updatedAt": "2025-11-25T18:30:00.000Z"
+      },
+      {
+        "id": "3",
+        "title": "Створити Native Custom Fields Taxonomies (Filters)",
+        "description": "Імплементувати систему фільтрів через custom taxonomies (Material, Finish, Application, Industry) без ACF, повністю через functions.php",
+        "status": "done",
+        "priority": "critical",
+        "dependencies": [],
+        "tags": [
+          "backend",
+          "wordpress",
+          "filters"
+        ],
+        "complexity": 9,
+        "estimatedHours": 8,
+        "subtasks": [
+          {
+            "id": 3,
+            "title": "Створити taxonomy 'product_material' (Paper, Vinyl, Plastic, etc.)",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Створити taxonomy 'product_finish' (Glossy, Matte, etc.)",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Створити taxonomy 'application_environment' (Indoor, Outdoor, Freezer, etc.)",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Створити taxonomy 'industry_compliance' (FDA, ISO, etc.)",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Зареєструвати всі taxonomies в WPGraphQL",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Додати meta boxes в admin panel для зручного управління",
+            "status": "pending",
+            "parentId": "undefined"
+          }
+        ],
+        "updatedAt": "2025-11-25T19:11:56.859Z"
+      },
+      {
+        "id": "4",
+        "title": "Додати Product Meta Fields (SKU, MOQ, Lead Time)",
+        "description": "Створити custom meta fields для продуктів: SKU, MOQ, Lead Time, Size (width/height), Weight, Waterproof через native WordPress meta boxes",
+        "status": "done",
+        "priority": "high",
+        "dependencies": [
+          "3"
+        ],
+        "tags": [
+          "backend",
+          "wordpress",
+          "meta-fields"
+        ],
+        "complexity": 7,
+        "estimatedHours": 5,
+        "subtasks": [
+          {
+            "id": 4,
+            "title": "Створити meta box для Product Details (SKU, MOQ, Lead Time)",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Створити meta box для Physical Properties (Size, Weight)",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Створити meta box для Special Features (Waterproof, UV Resistant, etc.)",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Зареєструвати всі meta fields в WPGraphQL",
+            "status": "pending",
+            "parentId": "undefined"
+          }
+        ],
+        "updatedAt": "2025-11-25T22:42:59.274Z"
+      },
+      {
+        "id": "5",
+        "title": "Створити Homepage з Hero та Category Grid",
+        "description": "Імплементувати homepage з Hero section, 6 категорій продукції (grid 3x2), Trust Indicators, Use Case Wizard (optional)",
+        "status": "done",
+        "priority": "medium",
+        "dependencies": [
+          "2"
+        ],
+        "tags": [
+          "frontend",
+          "pages",
+          "homepage"
+        ],
+        "complexity": 8,
+        "estimatedHours": 6,
+        "subtasks": [
+          {
+            "id": 5,
+            "title": "Створити Hero section з background image та CTA",
+            "status": "done",
+            "parentId": "5"
+          },
+          {
+            "id": 5,
+            "title": "Створити CategoryCard компонент",
+            "status": "done",
+            "parentId": "5"
+          },
+          {
+            "id": 5,
+            "title": "Імплементувати Category Grid (responsive 1→2→3 колонки)",
+            "status": "done",
+            "parentId": "5"
+          },
+          {
+            "id": 5,
+            "title": "Додати Trust Indicators section",
+            "status": "done",
+            "parentId": "5"
+          },
+          {
+            "id": 5,
+            "title": "Створити Use Case Wizard (опціонально для Phase 2)",
+            "status": "pending",
+            "parentId": "5"
+          }
+        ],
+        "updatedAt": "2025-11-25T15:04:43.495Z"
+      },
+      {
+        "id": "6",
+        "title": "Створити Category Page з Filtering (Tier 1 + Tier 2)",
+        "description": "Створити сторінку категорії з двома рівнями фільтрів: Tier 1 (Technical: Material, Finish) та Tier 2 (Use Case: Application, Industry)",
+        "status": "done",
+        "priority": "critical",
+        "dependencies": [
+          "3",
+          "5"
+        ],
+        "tags": [
+          "frontend",
+          "filtering",
+          "category"
+        ],
+        "complexity": 10,
+        "estimatedHours": 10,
+        "subtasks": [
+          {
+            "id": 6,
+            "title": "Створити dynamic route /[lang]/[category]/page.tsx",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Створити FilterSidebar компонент з Tier 1 filters",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Додати Tier 2 Use Case Filters (Application Environment)",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Імплементувати filter state management (URL params)",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Створити ActiveFilters chips компонент",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Додати GraphQL query з where фільтрацією",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Імплементувати responsive filter (sidebar → drawer на mobile)",
+            "status": "pending",
+            "parentId": "undefined"
+          }
+        ],
+        "updatedAt": "2025-11-25T19:39:08.536Z"
+      },
+      {
+        "id": "7",
+        "title": "Створити Single Product Page (B2B style)",
+        "description": "PDP з акцентом на B2B: Request Quote CTA (замість Add to Cart), Technical Specs, Use Cases, Related Products. БЕЗ ціни та рейтингів",
+        "status": "done",
+        "priority": "critical",
+        "dependencies": [
+          "2",
+          "4"
+        ],
+        "tags": [
+          "frontend",
+          "pdp",
+          "b2b"
+        ],
+        "complexity": 9,
+        "estimatedHours": 8,
+        "subtasks": [
+          {
+            "id": 7,
+            "title": "Створити dynamic route /[lang]/products/[slug]/page.tsx",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 7,
+            "title": "Створити ProductDetail layout (image gallery + specs)",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 7,
+            "title": "Додати Request Quote CTA (замість Add to Cart)",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 7,
+            "title": "Створити Technical Specifications table",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 7,
+            "title": "Додати Use Cases section (Application Environment tags)",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 7,
+            "title": "Створити Related Products section",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 7,
+            "title": "Імплементувати Breadcrumbs navigation",
+            "status": "pending",
+            "parentId": "undefined"
+          }
+        ],
+        "updatedAt": "2025-11-25T23:21:16.501Z"
+      },
+      {
+        "id": "8",
+        "title": "Створити Request Quote Form",
+        "description": "Форма для B2B запитів: вибір продукту, quantity, custom message, contact info. Інтеграція з email або CRM",
+        "status": "done",
+        "priority": "high",
+        "dependencies": [
+          "7"
+        ],
+        "tags": [
+          "frontend",
+          "forms",
+          "b2b"
+        ],
+        "complexity": 7,
+        "estimatedHours": 5,
+        "subtasks": [
+          {
+            "id": 8,
+            "title": "Створити RequestQuoteForm компонент (react-hook-form + zod)",
+            "status": "done",
+            "parentId": "8"
+          },
+          {
+            "id": 8,
+            "title": "Додати поля: Product, Quantity, Company, Contact Info",
+            "status": "done",
+            "parentId": "8"
+          },
+          {
+            "id": 8,
+            "title": "Створити API route /api/quote для form submission",
+            "status": "done",
+            "parentId": "8"
+          },
+          {
+            "id": 8,
+            "title": "Налаштувати email notification (Resend або SendGrid)",
+            "status": "done",
+            "parentId": "8"
+          },
+          {
+            "id": 8,
+            "title": "Додати success/error toast notifications",
+            "status": "done",
+            "parentId": "8"
+          }
+        ],
+        "updatedAt": "2025-11-25T15:04:45.336Z"
+      },
+      {
+        "id": "9",
+        "title": "Додати Product Search з multi-language",
+        "description": "Search functionality з підтримкою пошуку українською та англійською, search по title, description, SKU",
+        "status": "done",
+        "priority": "high",
+        "dependencies": [
+          "2"
+        ],
+        "tags": [
+          "frontend",
+          "search",
+          "i18n"
+        ],
+        "complexity": 8,
+        "estimatedHours": 6,
+        "subtasks": [
+          {
+            "id": 9,
+            "title": "Створити SearchInput компонент в header",
+            "status": "done",
+            "parentId": "9"
+          },
+          {
+            "id": 9,
+            "title": "Імплементувати debounced search з GraphQL",
+            "status": "done",
+            "parentId": "9"
+          },
+          {
+            "id": 9,
+            "title": "Додати language-aware search (query в поточній мові)",
+            "status": "done",
+            "parentId": "9"
+          },
+          {
+            "id": 9,
+            "title": "Створити search results page /[lang]/search",
+            "status": "done",
+            "parentId": "9"
+          },
+          {
+            "id": 9,
+            "title": "Додати search suggestions dropdown",
+            "status": "done",
+            "parentId": "9"
+          }
+        ],
+        "updatedAt": "2025-11-25T15:04:44.448Z"
+      },
+      {
+        "id": "10",
+        "title": "SEO Optimization з hreflang та Open Graph",
+        "description": "Комплексна SEO оптимізація: hreflang для мультимовності, Open Graph, structured data, canonical URLs, sitemap",
+        "status": "done",
+        "priority": "critical",
+        "dependencies": [
+          "2",
+          "7"
+        ],
+        "tags": [
+          "seo",
+          "nextjs",
+          "metadata"
+        ],
+        "complexity": 8,
+        "estimatedHours": 6,
+        "subtasks": [
+          {
+            "id": 10,
+            "title": "Додати generateMetadata для всіх pages",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 10,
+            "title": "Імплементувати hreflang tags (uk ↔ en)",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 10,
+            "title": "Додати Open Graph tags з локалізацією",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 10,
+            "title": "Створити JSON-LD structured data для Product schema",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 10,
+            "title": "Налаштувати canonical URLs",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 10,
+            "title": "Створити multi-language sitemap.xml",
+            "status": "pending",
+            "parentId": "undefined"
+          }
+        ],
+        "updatedAt": "2025-11-26T00:23:03.668Z"
+      },
+      {
+        "id": "11",
+        "title": "Імплементувати Dark Header дизайн (Midocean style)",
+        "description": "Створити темний header (#393939) у стилі Midocean.com з logo, navigation, language switcher, search",
+        "status": "done",
+        "priority": "medium",
+        "dependencies": [
+          "2"
+        ],
+        "tags": [
+          "frontend",
+          "design-system",
+          "header"
+        ],
+        "complexity": 6,
+        "estimatedHours": 4,
+        "subtasks": [
+          {
+            "id": 11,
+            "title": "Створити DarkHeader компонент (#393939 background)",
+            "status": "done",
+            "parentId": "11"
+          },
+          {
+            "id": 11,
+            "title": "Додати sticky behavior з scroll effect",
+            "status": "done",
+            "parentId": "11"
+          },
+          {
+            "id": 11,
+            "title": "Інтегрувати LanguageSwitcher та SearchInput",
+            "status": "done",
+            "parentId": "11"
+          },
+          {
+            "id": 11,
+            "title": "Створити mobile hamburger menu",
+            "status": "done",
+            "parentId": "11"
+          }
+        ],
+        "updatedAt": "2025-11-25T15:04:36.338Z"
+      },
+      {
+        "id": "12",
+        "title": "Налаштувати GraphQL Caching та Performance",
+        "description": "Оптимізувати GraphQL запити, додати caching (WPGraphQL Smart Cache), налаштувати query depth limiting",
+        "status": "done",
+        "priority": "medium",
+        "dependencies": [],
+        "tags": [
+          "backend",
+          "performance",
+          "graphql"
+        ],
+        "complexity": 7,
+        "estimatedHours": 5,
+        "subtasks": [
+          {
+            "id": 12,
+            "title": "Встановити WPGraphQL Smart Cache plugin",
+            "status": "done",
+            "parentId": "12"
+          },
+          {
+            "id": 12,
+            "title": "Налаштувати query depth limiting (max 5 levels)",
+            "status": "done",
+            "parentId": "12"
+          },
+          {
+            "id": 12,
+            "title": "Оптимізувати database queries (додати indexes)",
+            "status": "done",
+            "parentId": "12"
+          },
+          {
+            "id": 12,
+            "title": "Провести performance testing (response time < 500ms)",
+            "status": "done",
+            "parentId": "12"
+          }
+        ],
+        "updatedAt": "2025-11-25T15:04:38.197Z"
+      },
+      {
+        "id": "13",
+        "title": "Додати ISR та Static Generation",
+        "description": "Налаштувати Incremental Static Regeneration для product pages, category pages для максимальної швидкості",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          "7"
+        ],
+        "tags": [
+          "frontend",
+          "nextjs",
+          "performance"
+        ],
+        "complexity": 6,
+        "estimatedHours": 4,
+        "subtasks": [
+          {
+            "id": 13,
+            "title": "Налаштувати generateStaticParams для product pages",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 13,
+            "title": "Додати revalidate для ISR (60 секунд)",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 13,
+            "title": "Імплементувати loading.tsx та error.tsx",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 13,
+            "title": "Провести Lighthouse audit (target ≥ 90)",
+            "status": "pending",
+            "parentId": "undefined"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "title": "Створити About та Contact Pages",
+        "description": "Статичні сторінки з інформацією про компанію, контактна інформація, форма зворотного зв'язку",
+        "status": "done",
+        "priority": "medium",
+        "dependencies": [
+          "2"
+        ],
+        "tags": [
+          "frontend",
+          "pages",
+          "content"
+        ],
+        "complexity": 5,
+        "estimatedHours": 3,
+        "subtasks": [
+          {
+            "id": 14,
+            "title": "Створити /[lang]/about/page.tsx",
+            "status": "done",
+            "parentId": "14"
+          },
+          {
+            "id": 14,
+            "title": "Створити /[lang]/contact/page.tsx з формою",
+            "status": "done",
+            "parentId": "14"
+          },
+          {
+            "id": 14,
+            "title": "Додати Google Maps (опціонально)",
+            "status": "pending",
+            "parentId": "14"
+          }
+        ],
+        "updatedAt": "2025-11-25T15:04:37.261Z"
+      },
+      {
+        "id": "15",
+        "title": "Accessibility Improvements (WCAG 2.1 AA)",
+        "description": "Покращити доступність: keyboard navigation, ARIA labels, color contrast, screen reader support",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [],
+        "tags": [
+          "accessibility",
+          "a11y",
+          "frontend"
+        ],
+        "complexity": 6,
+        "estimatedHours": 4,
+        "subtasks": [
+          {
+            "id": 15,
+            "title": "Додати keyboard navigation для всіх interactive elements",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 15,
+            "title": "Додати ARIA labels та roles",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 15,
+            "title": "Перевірити color contrast (≥ 4.5:1)",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 15,
+            "title": "Провести Lighthouse accessibility audit (≥ 90)",
+            "status": "pending",
+            "parentId": "undefined"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "title": "Створити Admin Guide для контент-менеджерів",
+        "description": "Документація по додаванню продуктів, управлінню перекладами через Polylang, налаштуванню фільтрів",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          "1",
+          "3"
+        ],
+        "tags": [
+          "documentation",
+          "training",
+          "wordpress"
+        ],
+        "complexity": 4,
+        "estimatedHours": 3,
+        "subtasks": [
+          {
+            "id": 16,
+            "title": "Написати guide по додаванню продукту з перекладом",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 16,
+            "title": "Написати guide по налаштуванню фільтрів (taxonomies)",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 16,
+            "title": "Створити screenshots та videos",
+            "status": "pending",
+            "parentId": "undefined"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "title": "Наповнити контент для всіх 6 категорій",
+        "description": "Створити продукти для всіх категорій: Stickers (✅14), Packaging (1→10), Print (0→5), Apparel (0→5), Banners (0→5), Promo (0→5)",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          "1",
+          "3",
+          "4"
+        ],
+        "tags": [
+          "content",
+          "wordpress",
+          "products"
+        ],
+        "complexity": 8,
+        "estimatedHours": 12,
+        "subtasks": [
+          {
+            "id": 17,
+            "title": "Додати 9 продуктів до Custom Packaging (total 10)",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 17,
+            "title": "Створити 5 продуктів для Print Marketing Materials",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 17,
+            "title": "Створити 5 продуктів для Corporate Apparel",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 17,
+            "title": "Створити 5 продуктів для Banners & Posters",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 17,
+            "title": "Створити 5 продуктів для Promotional Items",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 17,
+            "title": "Додати англійські переклади для всіх продуктів",
+            "status": "pending",
+            "parentId": "undefined"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "title": "Unit та Integration Testing",
+        "description": "Написати tests для критичних компонентів: FilterSidebar, SearchInput, RequestQuoteForm, ProductCard, ImageGallery та інших нових компонентів",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          "6",
+          "8",
+          "9",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25"
+        ],
+        "tags": [
+          "testing",
+          "quality",
+          "jest"
+        ],
+        "complexity": 8,
+        "estimatedHours": 8,
+        "subtasks": [
+          {
+            "id": 18,
+            "title": "Налаштувати Jest та React Testing Library",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 18,
+            "title": "Написати tests для FilterSidebar компонента",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 18,
+            "title": "Написати tests для SearchInput",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 18,
+            "title": "Написати tests для RequestQuoteForm",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 18,
+            "title": "Налаштувати test coverage reporting (≥ 70%)",
+            "status": "pending",
+            "parentId": "undefined"
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "title": "Final QA Testing на всіх браузерах",
+        "description": "Повне тестування на Chrome, Firefox, Safari, Edge (desktop + mobile). Перевірка обох мов (UK/EN)",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          "7",
+          "8",
+          "10",
+          "13"
+        ],
+        "tags": [
+          "testing",
+          "qa",
+          "cross-browser"
+        ],
+        "complexity": 7,
+        "estimatedHours": 8,
+        "subtasks": [
+          {
+            "id": 19,
+            "title": "Manual testing: Chrome, Firefox, Safari, Edge",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 19,
+            "title": "Responsive testing (mobile 375px, tablet 768px, desktop 1280px)",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 19,
+            "title": "i18n testing (перевірка UK та EN версій)",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 19,
+            "title": "Performance testing (Lighthouse, PageSpeed)",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 19,
+            "title": "Accessibility testing (axe DevTools)",
+            "status": "pending",
+            "parentId": "undefined"
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "title": "Production Deployment та Launch",
+        "description": "Deploy frontend на Vercel, backend на hosting, налаштування DNS, SSL, monitoring та офіційний launch",
+        "status": "pending",
+        "priority": "critical",
+        "dependencies": [
+          "19"
+        ],
+        "tags": [
+          "deployment",
+          "devops",
+          "launch"
+        ],
+        "complexity": 8,
+        "estimatedHours": 6,
+        "subtasks": [
+          {
+            "id": 20,
+            "title": "Deploy Next.js на Vercel з environment variables",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 20,
+            "title": "Deploy WordPress на production hosting",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 20,
+            "title": "Налаштувати DNS records та SSL certificates",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 20,
+            "title": "Налаштувати monitoring (Sentry для errors, Analytics)",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 20,
+            "title": "Провести smoke tests на production",
+            "status": "pending",
+            "parentId": "undefined"
+          },
+          {
+            "id": 20,
+            "title": "Офіційний launch та stakeholder notification",
+            "status": "pending",
+            "parentId": "undefined"
+          }
+        ]
+      },
+      {
+        "id": "21",
+        "title": "Галерея товару (6-8 зображень за візуальною стратегією)",
+        "description": "Підтримка 6-8 фото: 1-Основне (білий фон), 2-3-Ракурси, 4-Макро (текстури), 5-Варіанти (матеріали/кольори), 6-Контекст (AI-сцена), 7-8-Кейс/інфографіка. Backend: Gallery meta box. Frontend: ImageGallery з zoom для макро.",
+        "status": "done",
+        "priority": "high",
+        "dependencies": [
+          "7",
+          "26"
+        ],
+        "tags": [
+          "frontend",
+          "backend",
+          "gallery",
+          "images",
+          "b2b"
+        ],
+        "complexity": 8,
+        "estimatedHours": 8,
+        "subtasks": [
+          {
+            "id": 21,
+            "title": "Створити Gallery meta box в WordPress (до 8 зображень з типами)",
+            "status": "pending",
+            "parentId": "21"
+          },
+          {
+            "id": 21,
+            "title": "Зареєструвати gallery з image types в WPGraphQL",
+            "status": "pending",
+            "parentId": "21"
+          },
+          {
+            "id": 21,
+            "title": "Імплементувати ThumbHash для blur placeholders",
+            "status": "pending",
+            "parentId": "21"
+          },
+          {
+            "id": 21,
+            "title": "Створити ImageGallery з embla-carousel (swipe)",
+            "status": "pending",
+            "parentId": "21"
+          },
+          {
+            "id": 21,
+            "title": "Додати react-medium-image-zoom для макро-фото",
+            "status": "pending",
+            "parentId": "21"
+          },
+          {
+            "id": 21,
+            "title": "Next.js Image з AVIF/WebP + lazy loading",
+            "status": "pending",
+            "parentId": "21"
+          },
+          {
+            "id": 21,
+            "title": "Image type badges (Основне/Ракурс/Макро/Контекст)",
+            "status": "pending",
+            "parentId": "21"
+          }
+        ],
+        "updatedAt": "2025-11-26T02:34:37.154Z"
+      },
+      {
+        "id": "22",
+        "title": "Редизайн Homepage (за візуальною стратегією B2B)",
+        "description": "Hero з AI-сценою комплекту (одяг+пакування+POS+поліграфія), 8 категорій з AI-рендерами на білому фоні, секція Кейсів для корпорацій, Trust Indicators (партнери/клієнти).",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          "5",
+          "26"
+        ],
+        "tags": [
+          "frontend",
+          "design",
+          "homepage",
+          "b2b"
+        ],
+        "complexity": 8,
+        "estimatedHours": 10,
+        "subtasks": [
+          {
+            "id": 22,
+            "title": "Hero: AI-сцена з комплектом продуктів (Corporate Branding Solutions)",
+            "status": "pending",
+            "parentId": "22"
+          },
+          {
+            "id": 22,
+            "title": "Category Grid: 8 карток з AI-рендерами (білий фон, 3D-тіні)",
+            "status": "pending",
+            "parentId": "22"
+          },
+          {
+            "id": 22,
+            "title": "Секція Кейсів: реальні роботи для корпорацій",
+            "status": "pending",
+            "parentId": "22"
+          },
+          {
+            "id": 22,
+            "title": "Partners/Clients logos carousel",
+            "status": "pending",
+            "parentId": "22"
+          },
+          {
+            "id": 22,
+            "title": "Why Choose Us (комплексні рішення, якість, терміни)",
+            "status": "pending",
+            "parentId": "22"
+          },
+          {
+            "id": 22,
+            "title": "CTA banner (Request Quote / Замовити консультацію)",
+            "status": "pending",
+            "parentId": "22"
+          },
+          {
+            "id": 22,
+            "title": "Статистика компанії (counters: клієнтів, проєктів, років)",
+            "status": "pending",
+            "parentId": "22"
+          },
+          {
+            "id": 22,
+            "title": "Newsletter signup (опціонально)",
+            "status": "pending",
+            "parentId": "22"
+          }
+        ]
+      },
+      {
+        "id": "23",
+        "title": "Категорії та підкатегорії (дизайн та функціонал)",
+        "description": "Покращений дизайн категорій: hierarchical categories (parent/child), category header з cover image, subcategory cards, breadcrumbs, sidebar navigation, filter counts.",
+        "status": "done",
+        "priority": "high",
+        "dependencies": [
+          "6"
+        ],
+        "tags": [
+          "frontend",
+          "backend",
+          "categories",
+          "design"
+        ],
+        "complexity": 9,
+        "estimatedHours": 10,
+        "subtasks": [
+          {
+            "id": 23,
+            "title": "Налаштувати hierarchical categories в WordPress (parent/child)",
+            "status": "done",
+            "parentId": "23",
+            "updatedAt": "2025-11-26T14:23:22.329Z"
+          },
+          {
+            "id": 23,
+            "title": "Зареєструвати subcategories в GraphQL",
+            "status": "pending",
+            "parentId": "23"
+          },
+          {
+            "id": 23,
+            "title": "Category header з cover image та description",
+            "status": "pending",
+            "parentId": "23"
+          },
+          {
+            "id": 23,
+            "title": "Subcategory cards grid",
+            "status": "pending",
+            "parentId": "23"
+          },
+          {
+            "id": 23,
+            "title": "Breadcrumbs з category hierarchy",
+            "status": "pending",
+            "parentId": "23"
+          },
+          {
+            "id": 23,
+            "title": "Category sidebar navigation (tree structure)",
+            "status": "pending",
+            "parentId": "23"
+          },
+          {
+            "id": 23,
+            "title": "Filter counts per subcategory",
+            "status": "pending",
+            "parentId": "23"
+          },
+          {
+            "id": 23,
+            "title": "Mobile: Collapsible subcategory navigation",
+            "status": "pending",
+            "parentId": "23"
+          }
+        ],
+        "updatedAt": "2025-11-26T14:23:33.864Z"
+      },
+      {
+        "id": "24",
+        "title": "Детальний дизайн сторінки товару (B2B + Кейси)",
+        "description": "PDP за візуальною стратегією: Tabs (Опис/Характеристики/Кейси), Technical specs, Context scenes (AI-інтер'єри), Download PDF, Related products. Кейси для подарункових наборів та комплексних рішень.",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          "7",
+          "21",
+          "26"
+        ],
+        "tags": [
+          "frontend",
+          "design",
+          "pdp",
+          "product",
+          "b2b",
+          "cases"
+        ],
+        "complexity": 9,
+        "estimatedHours": 10,
+        "subtasks": [
+          {
+            "id": 24,
+            "title": "Product tabs (Опис, Характеристики, Кейси використання)",
+            "status": "pending",
+            "parentId": "24"
+          },
+          {
+            "id": 24,
+            "title": "Technical specifications таблиця (матеріали, розміри, особливості)",
+            "status": "pending",
+            "parentId": "24"
+          },
+          {
+            "id": 24,
+            "title": "Context scenes секція (AI-інтер'єри: офіс, виставка, reception)",
+            "status": "pending",
+            "parentId": "24"
+          },
+          {
+            "id": 24,
+            "title": "Case studies секція (для подарункових наборів - опціонально)",
+            "status": "pending",
+            "parentId": "24"
+          },
+          {
+            "id": 24,
+            "title": "Download section (PDF datasheets, сертифікати)",
+            "status": "pending",
+            "parentId": "24"
+          },
+          {
+            "id": 24,
+            "title": "Related products carousel",
+            "status": "pending",
+            "parentId": "24"
+          },
+          {
+            "id": 24,
+            "title": "Recently viewed products (localStorage)",
+            "status": "pending",
+            "parentId": "24"
+          },
+          {
+            "id": 24,
+            "title": "Share + Print buttons",
+            "status": "pending",
+            "parentId": "24"
+          },
+          {
+            "id": 24,
+            "title": "Sticky Request Quote CTA on scroll",
+            "status": "pending",
+            "parentId": "24"
+          }
+        ]
+      },
+      {
+        "id": "25",
+        "title": "Блог/Статті (Posts)",
+        "description": "Система блогу: WordPress Posts з Polylang, Blog listing page, Single post page, Post card компонент, Sidebar, Related posts, Article schema для SEO.",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          "2"
+        ],
+        "tags": [
+          "frontend",
+          "backend",
+          "blog",
+          "content"
+        ],
+        "complexity": 7,
+        "estimatedHours": 8,
+        "subtasks": [
+          {
+            "id": 25,
+            "title": "Налаштувати WordPress Posts з Polylang",
+            "status": "pending",
+            "parentId": "25"
+          },
+          {
+            "id": 25,
+            "title": "Додати post categories та tags в GraphQL",
+            "status": "pending",
+            "parentId": "25"
+          },
+          {
+            "id": 25,
+            "title": "Створити Blog listing page /[lang]/blog",
+            "status": "pending",
+            "parentId": "25"
+          },
+          {
+            "id": 25,
+            "title": "Створити Single post page /[lang]/blog/[slug]",
+            "status": "pending",
+            "parentId": "25"
+          },
+          {
+            "id": 25,
+            "title": "Post card компонент (image, excerpt, date, author)",
+            "status": "pending",
+            "parentId": "25"
+          },
+          {
+            "id": 25,
+            "title": "Post sidebar (categories, recent posts, tags cloud)",
+            "status": "pending",
+            "parentId": "25"
+          },
+          {
+            "id": 25,
+            "title": "Related posts секція",
+            "status": "pending",
+            "parentId": "25"
+          },
+          {
+            "id": 25,
+            "title": "SEO: Structured data для Article schema",
+            "status": "pending",
+            "parentId": "25"
+          }
+        ]
+      },
+      {
+        "id": "26",
+        "title": "Design System: Преміальний технічний мінімалізм",
+        "description": "Імплементація візуального стилю B2B: білі фони, реалістичні тіні, багато повітря, крупні плани. Оновлення Tailwind config, створення базових UI компонентів для продуктів та кейсів.",
+        "status": "done",
+        "priority": "high",
+        "dependencies": [],
+        "tags": [
+          "frontend",
+          "design-system",
+          "ui",
+          "tailwind"
+        ],
+        "complexity": 6,
+        "estimatedHours": 5,
+        "subtasks": [
+          {
+            "id": 26,
+            "title": "Оновити Tailwind config (кольори, тіні, spacing для 'повітря')",
+            "status": "pending",
+            "parentId": "26"
+          },
+          {
+            "id": 26,
+            "title": "Створити ProductImage компонент (білий фон, м'які тіні, 3D-перспектива)",
+            "status": "pending",
+            "parentId": "26"
+          },
+          {
+            "id": 26,
+            "title": "Створити CaseStudyCard компонент (фото + логотип клієнта + опис)",
+            "status": "pending",
+            "parentId": "26"
+          },
+          {
+            "id": 26,
+            "title": "Створити ContextScene компонент (AI-інтер'єри для контексту використання)",
+            "status": "pending",
+            "parentId": "26"
+          },
+          {
+            "id": 26,
+            "title": "Оновити Typography system (преміальний мінімалізм)",
+            "status": "pending",
+            "parentId": "26"
+          },
+          {
+            "id": 26,
+            "title": "Створити hover/transition ефекти для карток",
+            "status": "pending",
+            "parentId": "26"
+          }
+        ],
+        "updatedAt": "2025-11-26T01:35:44.627Z"
+      },
+      {
+        "id": "27",
+        "title": "Mega Menu для навігації",
+        "description": "Реалізація mega menu для header navigation з підтримкою: категорій товарів з іконками, featured products в dropdown, швидких посилань, responsive design для mobile. Mega menu повинен відкриватися при hover на desktop та при click на mobile.",
+        "details": "",
+        "testStrategy": "",
+        "status": "done",
+        "dependencies": [],
+        "priority": "high",
+        "subtasks": [],
+        "updatedAt": "2025-11-26T02:49:10.791Z"
+      },
+      {
+        "id": "28",
+        "title": "Система обліку популярності товарів (Product Analytics)",
+        "description": "DISCOVERY TASK: Спочатку обговорити вимоги, потім реалізовувати. Питання: 1) Метрики (перегляди, кліки, замовлення, час на сторінці) 2) Зберігання (WP meta, окрема таблиця, зовнішній сервіс) 3) Агрегація (daily/weekly/monthly) 4) Вплив на mega menu, категорії, рекомендації 5) GDPR considerations",
+        "details": "",
+        "testStrategy": "",
+        "status": "pending",
+        "dependencies": [],
+        "priority": "medium",
+        "subtasks": []
+      },
+      {
+        "id": "29",
+        "title": "Сезонні акції / Промо-блок (Seasonal Promotions)",
+        "description": "DISCOVERY TASK: Спочатку обговорити вимоги, потім реалізовувати. Питання: 1) Де використовувати (mega menu, homepage, categories, products) 2) WP Admin керування (CPT? Settings?) 3) Scheduling (дати акції) 4) Типи промо (%, фікс, доставка, подарунок) 5) Дизайн (банер, картка, popup) 6) A/B testing",
+        "details": "",
+        "testStrategy": "",
+        "status": "pending",
+        "dependencies": [],
+        "priority": "medium",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "version": "1.0.0",
+      "lastModified": "2025-11-26T14:23:33.865Z",
+      "taskCount": 29,
+      "completedCount": 17,
+      "tags": [
+        "master"
+      ]
+    }
+  }
+}

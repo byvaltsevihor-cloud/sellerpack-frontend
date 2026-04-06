@@ -1,0 +1,706 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Створити сторінку окремого продукту (Single Product Page)",
+      "description": "Імплементувати dynamic route /products/[slug] з повною інформацією про продукт, включаючи зображення, ціну, опис, SKU та статус наявності",
+      "status": "pending",
+      "priority": "critical",
+      "dependencies": [],
+      "tags": ["frontend", "nextjs", "pages"],
+      "complexity": 8,
+      "estimatedHours": 6,
+      "subtasks": [
+        {
+          "id": "1.1",
+          "title": "Створити dynamic route файл /products/[slug]/page.tsx",
+          "status": "pending"
+        },
+        {
+          "id": "1.2",
+          "title": "Створити GraphQL query для отримання продукту за slug",
+          "status": "pending"
+        },
+        {
+          "id": "1.3",
+          "title": "Створити ProductDetail компонент з layout",
+          "status": "pending"
+        },
+        {
+          "id": "1.4",
+          "title": "Додати image gallery для додаткових фото",
+          "status": "pending"
+        },
+        {
+          "id": "1.5",
+          "title": "Імплементувати breadcrumb navigation",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Додати SEO оптимізацію для всіх сторінок",
+      "description": "Налаштувати meta tags, Open Graph, Twitter Cards, structured data (JSON-LD) для всіх сторінок проєкту",
+      "status": "pending",
+      "priority": "critical",
+      "dependencies": ["1"],
+      "tags": ["seo", "nextjs", "metadata"],
+      "complexity": 7,
+      "estimatedHours": 5,
+      "subtasks": [
+        {
+          "id": "2.1",
+          "title": "Додати generateMetadata для product pages",
+          "status": "pending"
+        },
+        {
+          "id": "2.2",
+          "title": "Створити Open Graph теги (og:title, og:image, og:description)",
+          "status": "pending"
+        },
+        {
+          "id": "2.3",
+          "title": "Додати structured data (JSON-LD) для Product schema",
+          "status": "pending"
+        },
+        {
+          "id": "2.4",
+          "title": "Налаштувати canonical URLs",
+          "status": "pending"
+        },
+        {
+          "id": "2.5",
+          "title": "Створити robots.txt та sitemap.xml",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Імплементувати фільтрацію за категоріями",
+      "description": "Додати можливість фільтрувати продукти за категоріями з UI для вибору активних фільтрів",
+      "status": "pending",
+      "priority": "critical",
+      "dependencies": [],
+      "tags": ["frontend", "filtering", "ux"],
+      "complexity": 7,
+      "estimatedHours": 5,
+      "subtasks": [
+        {
+          "id": "3.1",
+          "title": "Створити CategoryFilter компонент",
+          "status": "pending"
+        },
+        {
+          "id": "3.2",
+          "title": "Додати GraphQL query для categories",
+          "status": "pending"
+        },
+        {
+          "id": "3.3",
+          "title": "Імплементувати filter state management (URL params)",
+          "status": "pending"
+        },
+        {
+          "id": "3.4",
+          "title": "Створити сторінки категорій /category/[slug]",
+          "status": "pending"
+        },
+        {
+          "id": "3.5",
+          "title": "Додати 'Clear filters' кнопку",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Додати функціонал пошуку продуктів",
+      "description": "Імплементувати search input в header з real-time результатами та окремою сторінкою результатів пошуку",
+      "status": "pending",
+      "priority": "critical",
+      "dependencies": [],
+      "tags": ["frontend", "search", "ux"],
+      "complexity": 8,
+      "estimatedHours": 6,
+      "subtasks": [
+        {
+          "id": "4.1",
+          "title": "Створити SearchInput компонент в header",
+          "status": "pending"
+        },
+        {
+          "id": "4.2",
+          "title": "Додати GraphQL query з search параметром",
+          "status": "pending"
+        },
+        {
+          "id": "4.3",
+          "title": "Імплементувати debounced search",
+          "status": "pending"
+        },
+        {
+          "id": "4.4",
+          "title": "Створити search results page /search",
+          "status": "pending"
+        },
+        {
+          "id": "4.5",
+          "title": "Додати highlight для matched terms",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Додати сортування продуктів",
+      "description": "Імплементувати можливість сортування продуктів за ціною, назвою та датою додавання",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": [],
+      "tags": ["frontend", "sorting", "ux"],
+      "complexity": 5,
+      "estimatedHours": 3,
+      "subtasks": [
+        {
+          "id": "5.1",
+          "title": "Створити SortSelector компонент",
+          "status": "pending"
+        },
+        {
+          "id": "5.2",
+          "title": "Додати sort параметри до GraphQL query",
+          "status": "pending"
+        },
+        {
+          "id": "5.3",
+          "title": "Імплементувати sort state в URL params",
+          "status": "pending"
+        },
+        {
+          "id": "5.4",
+          "title": "Додати сортування: Price (low→high, high→low), Name (A-Z, Z-A), Date",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Імплементувати пагінацію продуктів",
+      "description": "Додати pagination для product listing з можливістю вибору кількості продуктів на сторінці",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": [],
+      "tags": ["frontend", "pagination", "ux"],
+      "complexity": 6,
+      "estimatedHours": 4,
+      "subtasks": [
+        {
+          "id": "6.1",
+          "title": "Створити Pagination компонент",
+          "status": "pending"
+        },
+        {
+          "id": "6.2",
+          "title": "Додати pagination до GraphQL query (first, after)",
+          "status": "pending"
+        },
+        {
+          "id": "6.3",
+          "title": "Імплементувати page state в URL params",
+          "status": "pending"
+        },
+        {
+          "id": "6.4",
+          "title": "Додати вибір products per page (12, 24, 48)",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Додати Loading States та Error Handling",
+      "description": "Імплементувати skeleton loaders, error boundaries, 404 сторінку та graceful error handling",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": [],
+      "tags": ["frontend", "ux", "error-handling"],
+      "complexity": 6,
+      "estimatedHours": 4,
+      "subtasks": [
+        {
+          "id": "7.1",
+          "title": "Створити ProductSkeleton компонент",
+          "status": "pending"
+        },
+        {
+          "id": "7.2",
+          "title": "Створити error.tsx для error boundaries",
+          "status": "pending"
+        },
+        {
+          "id": "7.3",
+          "title": "Створити not-found.tsx (404 page)",
+          "status": "pending"
+        },
+        {
+          "id": "7.4",
+          "title": "Додати retry mechanism для GraphQL errors",
+          "status": "pending"
+        },
+        {
+          "id": "7.5",
+          "title": "Додати toast notifications для errors",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "title": "Оптимізація продуктивності (Performance Optimization)",
+      "description": "Налаштувати ISR, image lazy loading, code splitting та досягнути Lighthouse score ≥ 90",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": ["1", "2"],
+      "tags": ["performance", "optimization", "nextjs"],
+      "complexity": 7,
+      "estimatedHours": 5,
+      "subtasks": [
+        {
+          "id": "8.1",
+          "title": "Налаштувати ISR (Incremental Static Regeneration)",
+          "status": "pending"
+        },
+        {
+          "id": "8.2",
+          "title": "Оптимізувати images (lazy loading, blur placeholder)",
+          "status": "pending"
+        },
+        {
+          "id": "8.3",
+          "title": "Налаштувати code splitting для компонентів",
+          "status": "pending"
+        },
+        {
+          "id": "8.4",
+          "title": "Оптимізувати bundle size (tree shaking)",
+          "status": "pending"
+        },
+        {
+          "id": "8.5",
+          "title": "Провести Lighthouse audit та досягнути score ≥ 90",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "title": "Створити Related Products секцію",
+      "description": "Додати секцію 'Схожі продукти' на сторінці окремого продукту на основі категорій",
+      "status": "pending",
+      "priority": "medium",
+      "dependencies": ["1", "3"],
+      "tags": ["frontend", "features", "ux"],
+      "complexity": 5,
+      "estimatedHours": 3,
+      "subtasks": [
+        {
+          "id": "9.1",
+          "title": "Створити RelatedProducts компонент",
+          "status": "pending"
+        },
+        {
+          "id": "9.2",
+          "title": "Додати GraphQL query для related products",
+          "status": "pending"
+        },
+        {
+          "id": "9.3",
+          "title": "Імплементувати логіку вибору за categories",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Розширена фільтрація (Advanced Filtering)",
+      "description": "Додати додаткові фільтри: price range, stock status, multiple filters combination",
+      "status": "pending",
+      "priority": "medium",
+      "dependencies": ["3"],
+      "tags": ["frontend", "filtering", "ux"],
+      "complexity": 7,
+      "estimatedHours": 5,
+      "subtasks": [
+        {
+          "id": "10.1",
+          "title": "Створити PriceRangeFilter компонент (slider)",
+          "status": "pending"
+        },
+        {
+          "id": "10.2",
+          "title": "Додати StockStatusFilter (In Stock / Out of Stock)",
+          "status": "pending"
+        },
+        {
+          "id": "10.3",
+          "title": "Імплементувати multiple filters combination logic",
+          "status": "pending"
+        },
+        {
+          "id": "10.4",
+          "title": "Створити FilterChips для active filters",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Налаштувати GraphQL Caching та оптимізацію запитів",
+      "description": "Імплементувати caching strategy для GraphQL та оптимізувати queries для швидкості < 500ms",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": [],
+      "tags": ["backend", "performance", "graphql"],
+      "complexity": 6,
+      "estimatedHours": 4,
+      "subtasks": [
+        {
+          "id": "11.1",
+          "title": "Налаштувати WPGraphQL caching plugin",
+          "status": "pending"
+        },
+        {
+          "id": "11.2",
+          "title": "Додати query depth limiting",
+          "status": "pending"
+        },
+        {
+          "id": "11.3",
+          "title": "Оптимізувати database queries (indexes)",
+          "status": "pending"
+        },
+        {
+          "id": "11.4",
+          "title": "Провести performance testing (response time < 500ms)",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "Створити 404 та Error Pages",
+      "description": "Дизайн та імплементація custom 404 page та error pages з user-friendly messages",
+      "status": "pending",
+      "priority": "medium",
+      "dependencies": ["7"],
+      "tags": ["frontend", "ux", "pages"],
+      "complexity": 4,
+      "estimatedHours": 2,
+      "subtasks": [
+        {
+          "id": "12.1",
+          "title": "Створити custom 404.tsx page",
+          "status": "pending"
+        },
+        {
+          "id": "12.2",
+          "title": "Створити error.tsx з friendly messages",
+          "status": "pending"
+        },
+        {
+          "id": "12.3",
+          "title": "Додати navigation links (back to home, search)",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "title": "Accessibility Improvements (WCAG 2.1 Level AA)",
+      "description": "Покращити доступність сайту для keyboard navigation, screen readers та ARIA labels",
+      "status": "pending",
+      "priority": "medium",
+      "dependencies": [],
+      "tags": ["accessibility", "a11y", "frontend"],
+      "complexity": 6,
+      "estimatedHours": 4,
+      "subtasks": [
+        {
+          "id": "13.1",
+          "title": "Додати keyboard navigation для всіх interactive elements",
+          "status": "pending"
+        },
+        {
+          "id": "13.2",
+          "title": "Додати ARIA labels та roles",
+          "status": "pending"
+        },
+        {
+          "id": "13.3",
+          "title": "Перевірити color contrast ratios (≥ 4.5:1)",
+          "status": "pending"
+        },
+        {
+          "id": "13.4",
+          "title": "Додати skip navigation links",
+          "status": "pending"
+        },
+        {
+          "id": "13.5",
+          "title": "Провести Lighthouse accessibility audit (≥ 90)",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "title": "Написати Unit та Integration Tests",
+      "description": "Покрити критичні компоненти та функції unit tests та integration tests (coverage ≥ 80%)",
+      "status": "pending",
+      "priority": "medium",
+      "dependencies": ["1", "3", "4"],
+      "tags": ["testing", "quality", "ci-cd"],
+      "complexity": 8,
+      "estimatedHours": 8,
+      "subtasks": [
+        {
+          "id": "14.1",
+          "title": "Налаштувати Jest та React Testing Library",
+          "status": "pending"
+        },
+        {
+          "id": "14.2",
+          "title": "Написати tests для ProductCard компонента",
+          "status": "pending"
+        },
+        {
+          "id": "14.3",
+          "title": "Написати tests для filtering logic",
+          "status": "pending"
+        },
+        {
+          "id": "14.4",
+          "title": "Написати tests для search functionality",
+          "status": "pending"
+        },
+        {
+          "id": "14.5",
+          "title": "Налаштувати test coverage reporting",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "title": "Створити Deployment Documentation",
+      "description": "Написати детальну документацію для deployment на production (Vercel, VPS, або інше)",
+      "status": "pending",
+      "priority": "medium",
+      "dependencies": ["8"],
+      "tags": ["documentation", "deployment", "devops"],
+      "complexity": 4,
+      "estimatedHours": 3,
+      "subtasks": [
+        {
+          "id": "15.1",
+          "title": "Написати deployment guide для Vercel",
+          "status": "pending"
+        },
+        {
+          "id": "15.2",
+          "title": "Написати deployment guide для custom VPS",
+          "status": "pending"
+        },
+        {
+          "id": "15.3",
+          "title": "Створити environment variables checklist",
+          "status": "pending"
+        },
+        {
+          "id": "15.4",
+          "title": "Написати rollback procedure",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "title": "Internationalization (i18n) - Ukrainian + English",
+      "description": "Додати підтримку мультимовності (українська та англійська мови) з language switcher",
+      "status": "pending",
+      "priority": "low",
+      "dependencies": ["1", "2"],
+      "tags": ["i18n", "localization", "frontend"],
+      "complexity": 7,
+      "estimatedHours": 6,
+      "subtasks": [
+        {
+          "id": "16.1",
+          "title": "Налаштувати next-intl або next-i18next",
+          "status": "pending"
+        },
+        {
+          "id": "16.2",
+          "title": "Створити translation files (uk.json, en.json)",
+          "status": "pending"
+        },
+        {
+          "id": "16.3",
+          "title": "Додати language switcher в header",
+          "status": "pending"
+        },
+        {
+          "id": "16.4",
+          "title": "Перекласти всі UI strings",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "title": "Створити Admin Dashboard для моніторингу",
+      "description": "Додати простий dashboard для перегляду статистики продуктів, популярних пошукових запитів",
+      "status": "pending",
+      "priority": "low",
+      "dependencies": [],
+      "tags": ["admin", "dashboard", "analytics"],
+      "complexity": 6,
+      "estimatedHours": 5,
+      "subtasks": [
+        {
+          "id": "17.1",
+          "title": "Створити /admin route з authentication",
+          "status": "pending"
+        },
+        {
+          "id": "17.2",
+          "title": "Додати dashboard для product statistics",
+          "status": "pending"
+        },
+        {
+          "id": "17.3",
+          "title": "Імплементувати analytics tracking",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "title": "Провести Final QA Testing",
+      "description": "Повне тестування всіх функцій на різних браузерах та пристроях перед launch",
+      "status": "pending",
+      "priority": "critical",
+      "dependencies": ["1", "2", "3", "4", "5", "6", "7", "8"],
+      "tags": ["testing", "qa", "quality"],
+      "complexity": 7,
+      "estimatedHours": 8,
+      "subtasks": [
+        {
+          "id": "18.1",
+          "title": "Manual testing на Chrome, Firefox, Safari, Edge",
+          "status": "pending"
+        },
+        {
+          "id": "18.2",
+          "title": "Responsive testing (mobile, tablet, desktop)",
+          "status": "pending"
+        },
+        {
+          "id": "18.3",
+          "title": "Performance testing (Lighthouse, PageSpeed)",
+          "status": "pending"
+        },
+        {
+          "id": "18.4",
+          "title": "Accessibility testing (axe DevTools)",
+          "status": "pending"
+        },
+        {
+          "id": "18.5",
+          "title": "Cross-browser compatibility testing",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "title": "Створити User Guide для Content Managers",
+      "description": "Написати документацію для контент-менеджерів по роботі з WordPress admin та додаванню продуктів",
+      "status": "pending",
+      "priority": "medium",
+      "dependencies": [],
+      "tags": ["documentation", "training", "wordpress"],
+      "complexity": 4,
+      "estimatedHours": 3,
+      "subtasks": [
+        {
+          "id": "19.1",
+          "title": "Написати guide по додаванню нового продукту",
+          "status": "pending"
+        },
+        {
+          "id": "19.2",
+          "title": "Написати guide по управлінню категоріями",
+          "status": "pending"
+        },
+        {
+          "id": "19.3",
+          "title": "Створити screenshots та videos для documentation",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "title": "Production Deployment та Launch",
+      "description": "Фінальний deployment на production, налаштування DNS, SSL, моніторингу та офіційний launch",
+      "status": "pending",
+      "priority": "critical",
+      "dependencies": ["18"],
+      "tags": ["deployment", "devops", "launch"],
+      "complexity": 8,
+      "estimatedHours": 6,
+      "subtasks": [
+        {
+          "id": "20.1",
+          "title": "Deploy frontend to Vercel/production server",
+          "status": "pending"
+        },
+        {
+          "id": "20.2",
+          "title": "Deploy WordPress backend to hosting",
+          "status": "pending"
+        },
+        {
+          "id": "20.3",
+          "title": "Налаштувати DNS records та SSL certificates",
+          "status": "pending"
+        },
+        {
+          "id": "20.4",
+          "title": "Налаштувати monitoring (Sentry, Analytics)",
+          "status": "pending"
+        },
+        {
+          "id": "20.5",
+          "title": "Провести smoke tests на production",
+          "status": "pending"
+        },
+        {
+          "id": "20.6",
+          "title": "Офіційний launch та stakeholder notification",
+          "status": "pending"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "totalTasks": 20,
+    "generatedAt": "2025-11-25T15:30:00Z",
+    "projectName": "Sellerpack Headless E-Commerce",
+    "version": "1.0",
+    "source": "PRD v1.0"
+  }
+}

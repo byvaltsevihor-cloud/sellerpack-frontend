@@ -1,0 +1,89 @@
+{
+  "common": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact",
+    "search": "Search",
+    "language": "Language",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "backToHome": "Back to Home",
+    "loading": "Loading...",
+    "error": "Error",
+    "notFound": "Not Found"
+  },
+  "header": {
+    "catalog": "Catalog",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "searchPlaceholder": "Search products..."
+  },
+  "hero": {
+    "title": "Professional Printed Products",
+    "subtitle": "Stickers, packaging, corporate merch and more for your business",
+    "cta": "View Catalog",
+    "secondaryCta": "Contact Us"
+  },
+  "products": {
+    "title": "Our Products",
+    "allProducts": "All Products",
+    "categories": "Categories",
+    "filters": "Filters",
+    "sortBy": "Sort by",
+    "inStock": "In Stock",
+    "outOfStock": "Out of Stock",
+    "checkAvailability": "Check Availability",
+    "details": "Details",
+    "requestQuote": "Request Quote",
+    "addToQuote": "Add to Quote",
+    "sku": "SKU",
+    "found": "Products found",
+    "noProducts": "No products found",
+    "showAll": "Show all products"
+  },
+  "about": {
+    "title": "About Sellerpack",
+    "ourStory": "Our Story",
+    "ourValues": "Our Values",
+    "ourTeam": "Our Team",
+    "inNumbers": "Sellerpack in Numbers",
+    "yearsExperience": "Years of Experience",
+    "happyClients": "Happy Clients",
+    "projectsCompleted": "Projects Completed",
+    "clientGrowth": "Client Growth"
+  },
+  "contact": {
+    "title": "Contact",
+    "getInTouch": "Get in Touch",
+    "sendMessage": "Send Message",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "company": "Company",
+    "message": "Message",
+    "submit": "Submit",
+    "success": "Message sent!",
+    "error": "Error sending message"
+  },
+  "footer": {
+    "copyright": "All rights reserved",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "cta": {
+    "readyToStart": "Ready to Start?",
+    "contactUs": "Contact Us",
+    "viewProducts": "View Products"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Articles and news from Sellerpack about printed products, packaging and branding",
+    "readMore": "Read More",
+    "relatedPosts": "Related Posts",
+    "tags": "Tags",
+    "author": "Author",
+    "published": "Published",
+    "noPosts": "No posts yet"
+  }
+}

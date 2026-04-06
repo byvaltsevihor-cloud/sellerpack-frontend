@@ -1,0 +1,416 @@
+# Product Requirements Document (PRD)
+# Headless WordPress + Next.js E-Commerce Catalog
+
+Version: 1.0
+Date: 25 November 2025
+Status: Active Development (80% Complete)
+
+---
+
+## EXECUTIVE SUMMARY
+
+Development of a modern e-commerce catalog platform using Headless WordPress (backend CMS) and Next.js (frontend framework) with focus on performance, SEO, and user experience.
+
+Project Code: SELLERPACK-HEADLESS
+Target Launch: 30 December 2025
+
+---
+
+## PROJECT STATUS
+
+Current Progress: 80%
+- Phase 0: Environment Setup ✅ 100%
+- Phase 1: GraphQL Integration ✅ 100%
+- Phase 2: Frontend Foundation ✅ 85%
+- Phase 3: UI Development 🟡 30% (IN PROGRESS)
+- Phase 4: Testing & Deploy ⏳ 0%
+
+---
+
+## COMPLETED FEATURES
+
+### Backend Infrastructure ✅
+- Docker environment (WordPress, MySQL, phpMyAdmin)
+- Custom theme "sellerpack-headless" activated
+- Custom Post Type "sellerpack_product" with full meta fields
+- WPGraphQL 2.5.2 plugin configured
+- 15 products migrated and accessible via GraphQL
+- Product categories taxonomy
+- Featured images integration
+- WooCommerce meta fields exposed (SKU, price, stock)
+
+### Frontend Foundation ✅
+- Next.js 16.0.3 + React 19.2.0 setup
+- Products catalog page (/products) with responsive grid
+- GraphQL client (graphql-request) integration
+- SiteHeader and Footer components
+- Image optimization configured
+- Tailwind CSS v4 design system
+- shadcn/ui component library
+
+### Design System ✅
+- Branding color: #78be20 (Sellerpack green)
+- Typography system
+- Responsive breakpoints (mobile → tablet → desktop → wide)
+- Hover effects and transitions
+
+---
+
+## FEATURES TO IMPLEMENT
+
+### Priority 1: CRITICAL (Must Have for MVP)
+
+1. SINGLE PRODUCT PAGE
+   - Dynamic route: /products/[slug]
+   - Full product details display
+   - Featured image + image gallery
+   - Product meta (SKU, price, stock status)
+   - Breadcrumb navigation
+   - Related products section
+   - SEO meta tags per product
+   - Open Graph tags
+   - Structured data (JSON-LD)
+
+2. CATEGORY FILTERING
+   - Category taxonomy integration
+   - Filter products by category
+   - Category pages: /category/[slug]
+   - Active filter indicators
+   - Clear filters button
+
+3. SEARCH FUNCTIONALITY
+   - Search input in header
+   - Real-time search results
+   - Search results page
+   - Highlight matched terms
+   - Search by title, description, SKU
+
+4. SEO OPTIMIZATION
+   - Meta title and description per page
+   - Canonical URLs
+   - Open Graph tags (og:title, og:image, etc.)
+   - Twitter Card tags
+   - Structured data for products (schema.org)
+   - XML sitemap generation
+   - robots.txt configuration
+
+### Priority 2: IMPORTANT (Should Have)
+
+5. PRODUCT SORTING
+   - Sort by: Price (low to high, high to low)
+   - Sort by: Name (A-Z, Z-A)
+   - Sort by: Date added (newest first)
+   - Persist sort selection in URL params
+
+6. PAGINATION
+   - Paginated product listing
+   - Products per page: 12, 24, 48
+   - Page numbers navigation
+   - Previous/Next buttons
+   - URL parameters for page number
+
+7. LOADING STATES & ERROR HANDLING
+   - Loading skeletons for products
+   - Error boundaries
+   - 404 page for missing products
+   - Graceful GraphQL error handling
+   - Retry mechanism for failed requests
+
+8. PERFORMANCE OPTIMIZATION
+   - ISR (Incremental Static Regeneration)
+   - Image lazy loading
+   - Code splitting
+   - Bundle size optimization
+   - Lighthouse score ≥ 90
+
+### Priority 3: NICE TO HAVE (Could Have)
+
+9. ADVANCED FILTERING
+   - Price range slider
+   - Stock status filter (In Stock / Out of Stock)
+   - Multiple filters combination
+   - Filter chips/tags display
+
+10. PRODUCT COMPARISON
+    - Compare up to 3 products
+    - Side-by-side comparison table
+    - Compare button on product cards
+    - Persist comparison in localStorage
+
+11. WISHLIST/FAVORITES
+    - Add to wishlist button
+    - Wishlist page
+    - Persist in localStorage
+    - Wishlist counter in header
+
+12. INTERNATIONALIZATION (i18n)
+    - Ukrainian language (primary)
+    - English language (secondary)
+    - Language switcher in header
+    - Translated product content
+    - RTL support preparation
+
+---
+
+## TECHNICAL REQUIREMENTS
+
+### Performance Targets
+- Lighthouse Performance Score: ≥ 90
+- Lighthouse SEO Score: ≥ 95
+- Lighthouse Accessibility Score: ≥ 90
+- Time to Interactive (TTI): < 3.8s
+- Largest Contentful Paint (LCP): < 2.5s
+- First Contentful Paint (FCP): < 1.8s
+- GraphQL Response Time: < 500ms
+
+### Browser Support
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+- Mobile Safari (iOS 14+)
+- Chrome Mobile (Android 10+)
+
+### Responsive Design
+- Mobile: 320px - 767px (1 column)
+- Tablet: 768px - 1023px (2 columns)
+- Desktop: 1024px - 1439px (3 columns)
+- Wide: 1440px+ (4 columns)
+
+### Security
+- HTTPS in production
+- API rate limiting
+- Input sanitization
+- XSS prevention
+- CORS configuration
+
+### Accessibility (WCAG 2.1 Level AA)
+- Keyboard navigation
+- Screen reader support
+- ARIA labels
+- Color contrast ratios ≥ 4.5:1
+- Focus indicators
+- Alt text for all images
+
+---
+
+## TECHNICAL STACK
+
+Backend:
+- WordPress (latest)
+- WPGraphQL 2.5.2
+- MySQL 8.0
+- PHP 8.1+
+- Docker Compose
+
+Frontend:
+- Next.js 16.0.3
+- React 19.2.0
+- TypeScript 5.x
+- Tailwind CSS 4.1.9
+- graphql-request 7.3.4
+- shadcn/ui components
+
+Development:
+- Docker Desktop
+- Git version control
+- ESLint + Prettier
+- VS Code / Claude Code
+
+---
+
+## DATA MODEL
+
+Custom Post Type: sellerpack_product
+
+Core Fields:
+- title: String (product name)
+- slug: String (URL-friendly identifier)
+- content: HTML (full description)
+- excerpt: String (short description)
+- featuredImage: Media object
+
+Meta Fields (WooCommerce):
+- sku: String (product SKU)
+- price: String (current price)
+- regularPrice: String (regular price)
+- salePrice: String (sale price, optional)
+- stockStatus: Enum (instock, outofstock)
+- stockQuantity: Integer (available quantity)
+- weight: String (product weight)
+- dimensions: Object (length, width, height)
+
+Taxonomies:
+- productCategories: Hierarchical taxonomy
+
+---
+
+## GRAPHQL SCHEMA
+
+Query: sellerpackProducts
+Returns: Array of SellerpackProduct
+
+Fields Available:
+- id: ID!
+- title: String
+- slug: String
+- content: String
+- excerpt: String
+- date: String
+- modified: String
+- featuredImage { node { sourceUrl, altText } }
+- productCategories { nodes { id, name, slug } }
+- productMeta { sku, price, regularPrice, salePrice, stockStatus }
+
+---
+
+## USER STORIES
+
+1. As a visitor, I want to browse all products so I can see what's available
+2. As a visitor, I want to view product details so I can make informed decisions
+3. As a visitor, I want to filter products by category so I can find relevant items
+4. As a visitor, I want to search for products so I can quickly find what I need
+5. As a visitor, I want to sort products by price/name so I can compare options
+6. As a visitor, I want fast page loads so I have a good experience
+7. As a content manager, I want easy product management in WordPress
+8. As a content manager, I want changes to appear on frontend quickly
+
+---
+
+## SUCCESS CRITERIA
+
+Technical Success:
+✅ All core features implemented and working
+✅ Performance targets met (Lighthouse ≥ 90)
+✅ SEO optimization complete
+✅ Responsive design on all devices
+✅ GraphQL API performant (< 500ms)
+✅ Error handling robust
+✅ Code quality high (ESLint clean)
+
+Business Success:
+✅ Stakeholder approval received
+✅ Documentation complete
+✅ Content managers trained
+✅ Deployment guide ready
+✅ Positive user feedback
+
+---
+
+## CONSTRAINTS
+
+Time Constraints:
+- MVP deadline: 30 December 2025 (5 weeks remaining)
+- Current progress: 80%
+- Remaining work: 20% (critical features)
+
+Technical Constraints:
+- Must use existing WordPress installation
+- Must maintain backward compatibility with WooCommerce data
+- Must work in Docker environment
+- Must be free/open-source stack
+
+Resource Constraints:
+- Team: 1 Full-stack developer
+- Budget: Minimal (hosting costs only)
+
+---
+
+## RISKS
+
+1. Performance degradation with large product catalog
+   Mitigation: Implement pagination, caching, ISR
+
+2. GraphQL query complexity
+   Mitigation: Query optimization, depth limiting
+
+3. SEO issues with client-side rendering
+   Mitigation: Use Next.js SSG/ISR for static content
+
+4. Browser compatibility issues
+   Mitigation: Progressive enhancement, polyfills
+
+5. Third-party plugin conflicts
+   Mitigation: Minimal plugin usage, testing
+
+---
+
+## DEPLOYMENT STRATEGY
+
+Development: localhost (Docker)
+Staging: TBD
+Production: TBD
+
+Deployment Method:
+- Frontend: Vercel or custom VPS
+- Backend: Traditional WordPress hosting
+- Database: Managed MySQL or bundled
+
+---
+
+## DOCUMENTATION REQUIREMENTS
+
+✅ PROJECT-CHARTER.md (completed)
+✅ TECHNICAL-ARCHITECTURE.md (completed)
+✅ RISK-MANAGEMENT.md (completed)
+✅ DEVELOPMENT-WORKFLOW.md (completed)
+✅ DESIGN-SYSTEM-ARCHITECTURE.md (completed)
+✅ PROJECT-SUMMARY.md (completed)
+✅ PROGRESS.md (completed)
+✅ README.md (completed)
+✅ CHANGELOG.md (completed)
+
+Pending:
+- [ ] API Documentation
+- [ ] User Guide for Content Managers
+- [ ] Deployment Guide
+- [ ] Testing Documentation
+
+---
+
+## TIMELINE
+
+Week 1 (Nov 18-22): ✅ 100% Backend Setup Complete
+Week 2 (Nov 23-29): 🟡 85% Frontend Foundation (In Progress)
+Week 3 (Nov 30-Dec 6): ⏳ 0% UI Development (Planned)
+Week 4 (Dec 7-13): ⏳ 0% Testing & Polish (Planned)
+Week 5 (Dec 14-20): ⏳ 0% Documentation & Deploy (Planned)
+Week 6 (Dec 21-30): ⏳ 0% Final Testing & Launch (Planned)
+
+---
+
+## NEXT IMMEDIATE TASKS
+
+This Week (Nov 25-29):
+1. Create single product page with dynamic routing
+2. Implement category filtering UI
+3. Add search functionality to header
+4. Configure SEO meta tags
+5. Add breadcrumb navigation
+
+Next Week (Dec 2-6):
+1. Product sorting functionality
+2. Pagination implementation
+3. Loading states and error handling
+4. ISR configuration
+5. Performance optimization
+
+---
+
+## ACCEPTANCE CRITERIA
+
+Product is ready for launch when:
+✅ All Priority 1 features implemented
+✅ Lighthouse Performance ≥ 90
+✅ Lighthouse SEO ≥ 95
+✅ Lighthouse Accessibility ≥ 90
+✅ All pages responsive
+✅ Error handling complete
+✅ Documentation complete
+✅ Stakeholder sign-off received
+✅ Content loaded and tested
+✅ Production deployment successful
+
+---
+
+END OF DOCUMENT

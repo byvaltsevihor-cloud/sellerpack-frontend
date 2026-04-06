@@ -1,0 +1,48 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#f4f4f5"/>
+
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e4e4e7" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="400" fill="url(#grid)"/>
+
+  <!-- Registration marks corners -->
+  <!-- Top-left -->
+  <line x1="20" y1="10" x2="20" y2="30" stroke="#a1a1aa" stroke-width="0.5"/>
+  <line x1="10" y1="20" x2="30" y2="20" stroke="#a1a1aa" stroke-width="0.5"/>
+  <circle cx="20" cy="20" r="6" stroke="#a1a1aa" stroke-width="0.5" fill="none"/>
+
+  <!-- Top-right -->
+  <line x1="380" y1="10" x2="380" y2="30" stroke="#a1a1aa" stroke-width="0.5"/>
+  <line x1="370" y1="20" x2="390" y2="20" stroke="#a1a1aa" stroke-width="0.5"/>
+  <circle cx="380" cy="20" r="6" stroke="#a1a1aa" stroke-width="0.5" fill="none"/>
+
+  <!-- Bottom-left -->
+  <line x1="20" y1="370" x2="20" y2="390" stroke="#a1a1aa" stroke-width="0.5"/>
+  <line x1="10" y1="380" x2="30" y2="380" stroke="#a1a1aa" stroke-width="0.5"/>
+  <circle cx="20" cy="380" r="6" stroke="#a1a1aa" stroke-width="0.5" fill="none"/>
+
+  <!-- Bottom-right -->
+  <line x1="380" y1="370" x2="380" y2="390" stroke="#a1a1aa" stroke-width="0.5"/>
+  <line x1="370" y1="380" x2="390" y2="380" stroke="#a1a1aa" stroke-width="0.5"/>
+  <circle cx="380" cy="380" r="6" stroke="#a1a1aa" stroke-width="0.5" fill="none"/>
+
+  <!-- Center icon -->
+  <rect x="160" y="150" width="80" height="60" rx="2" stroke="#a1a1aa" stroke-width="1.5" fill="none"/>
+  <circle cx="180" cy="170" r="8" stroke="#a1a1aa" stroke-width="1.5" fill="none"/>
+  <path d="M165 200 L185 180 L205 195 L220 175 L235 200" stroke="#a1a1aa" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+
+  <!-- Text labels -->
+  <text x="200" y="240" text-anchor="middle" font-family="monospace" font-size="10" fill="#a1a1aa">NO_IMAGE</text>
+  <text x="200" y="255" text-anchor="middle" font-family="monospace" font-size="8" fill="#d4d4d8">400 x 400</text>
+
+  <!-- CMYK color bar -->
+  <rect x="175" y="280" width="12" height="8" fill="#00FFFF"/>
+  <rect x="188" y="280" width="12" height="8" fill="#FF00FF"/>
+  <rect x="201" y="280" width="12" height="8" fill="#FFFF00"/>
+  <rect x="214" y="280" width="12" height="8" fill="#71717a"/>
+</svg>

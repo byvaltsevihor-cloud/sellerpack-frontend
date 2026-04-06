@@ -1,0 +1,89 @@
+{
+  "common": {
+    "home": "Головна",
+    "products": "Продукти",
+    "about": "Про нас",
+    "contact": "Контакти",
+    "search": "Пошук",
+    "language": "Мова",
+    "readMore": "Детальніше",
+    "viewAll": "Переглянути все",
+    "backToHome": "На головну",
+    "loading": "Завантаження...",
+    "error": "Помилка",
+    "notFound": "Не знайдено"
+  },
+  "header": {
+    "catalog": "Каталог",
+    "portfolio": "Портфоліо",
+    "services": "Послуги",
+    "searchPlaceholder": "Пошук товарів..."
+  },
+  "hero": {
+    "title": "Професійна друкована продукція",
+    "subtitle": "Наклейки, упаковка, корпоративний мерч та багато іншого для вашого бізнесу",
+    "cta": "Переглянути каталог",
+    "secondaryCta": "Зв'язатись з нами"
+  },
+  "products": {
+    "title": "Наші Продукти",
+    "allProducts": "Всі продукти",
+    "categories": "Категорії",
+    "filters": "Фільтри",
+    "sortBy": "Сортувати за",
+    "inStock": "В наявності",
+    "outOfStock": "Немає в наявності",
+    "checkAvailability": "Уточнити наявність",
+    "details": "Деталі",
+    "requestQuote": "Запит ціни",
+    "addToQuote": "Додати до запиту",
+    "sku": "Артикул",
+    "found": "Знайдено товарів",
+    "noProducts": "Товари не знайдені",
+    "showAll": "Показати всі товари"
+  },
+  "about": {
+    "title": "Про Sellerpack",
+    "ourStory": "Наша історія",
+    "ourValues": "Наші цінності",
+    "ourTeam": "Наша команда",
+    "inNumbers": "Sellerpack у цифрах",
+    "yearsExperience": "Років досвіду",
+    "happyClients": "Задоволених клієнтів",
+    "projectsCompleted": "Виконаних проєктів",
+    "clientGrowth": "Ріст клієнтів"
+  },
+  "contact": {
+    "title": "Контакти",
+    "getInTouch": "Зв'яжіться з нами",
+    "sendMessage": "Надіслати повідомлення",
+    "name": "Ім'я",
+    "email": "Email",
+    "phone": "Телефон",
+    "company": "Компанія",
+    "message": "Повідомлення",
+    "submit": "Відправити",
+    "success": "Повідомлення надіслано!",
+    "error": "Помилка відправки"
+  },
+  "footer": {
+    "copyright": "Всі права захищено",
+    "privacyPolicy": "Політика конфіденційності",
+    "termsOfService": "Умови використання"
+  },
+  "cta": {
+    "readyToStart": "Готові розпочати співпрацю?",
+    "contactUs": "Зв'язатись з нами",
+    "viewProducts": "Переглянути продукти"
+  },
+  "blog": {
+    "title": "Блог",
+    "description": "Статті та новини від Sellerpack про друковану продукцію, упаковку та брендинг",
+    "readMore": "Читати далі",
+    "relatedPosts": "Схожі статті",
+    "tags": "Теги",
+    "author": "Автор",
+    "published": "Опубліковано",
+    "noPosts": "Поки що немає статей"
+  }
+}
